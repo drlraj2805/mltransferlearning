@@ -200,8 +200,8 @@ from keras.models import Model
 from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu//train/'
-validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu//validation/'
+train_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu/train/'
+validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu/validation/'
 
 train_datagen = ImageDataGenerator(
       rescale=1./255,
