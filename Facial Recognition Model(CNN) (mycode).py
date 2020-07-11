@@ -140,7 +140,7 @@ training_set = train_datagen.flow_from_directory(
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        'C:/Users/A/Desktop/mlops/mlt4/monu/validation/',
+        'C:/Users/A/Desktop/mlops/mlt4/monu/validate/',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
@@ -201,7 +201,7 @@ from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 
 train_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu/train/'
-validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu/validation/'
+validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt4/monu/validate/'
 
 train_datagen = ImageDataGenerator(
       rescale=1./255,
