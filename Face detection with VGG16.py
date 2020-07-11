@@ -350,11 +350,11 @@ from os import listdir
 from os.path import isfile, join
 
 monkey_breeds_dict = {"[0]": "monu", 
-                      "[1]": "covid"
+                      "[1]": "family"
                       }
 
 monkey_breeds_dict_n = {"anmol": "monu", 
-                      "normal": "covid"}
+                      "normal": "family"}
 cap = cv2.VideoCapture(0)
 def draw_test(name, pred, im):
     monkey = monkey_breeds_dict[str(pred)]
