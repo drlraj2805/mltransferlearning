@@ -131,8 +131,8 @@ train_datagen = ImageDataGenerator(
 validation_datagen = ImageDataGenerator(rescale=1./255)
  
 # Change the batchsize according to your system RAM
-train_batchsize = 16
-val_batchsize = 10
+train_batchsize = 10
+val_batchsize = 6
  
 train_generator = train_datagen.flow_from_directory(
         train_data_dir,
@@ -179,7 +179,7 @@ modelnew.compile(loss = 'categorical_crossentropy',
 nb_train_samples = 135
 nb_validation_samples = 45
 epochs = 2
-batch_size = 16
+batch_size = 10
 
 history = modelnew.fit_generator(
     train_generator,
@@ -234,7 +234,7 @@ from keras.optimizers import RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 
 train_data_dir = 'C:/Users/A/Desktop/mlops/mlt3/monu//train/'
-validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt3/monu//validation/'
+validation_data_dir = 'C:/Users/A/Desktop/mlops/mlt3/monu//validate/'
 
 train_datagen = ImageDataGenerator(
       rescale=1./255,
@@ -247,8 +247,8 @@ train_datagen = ImageDataGenerator(
 validation_datagen = ImageDataGenerator(rescale=1./255)
  
 # Change the batchsize according to your system RAM
-train_batchsize = 16
-val_batchsize = 10
+train_batchsize = 10
+val_batchsize = 6
  
 train_generator = train_datagen.flow_from_directory(
         train_data_dir,
@@ -353,8 +353,8 @@ monkey_breeds_dict = {"[0]": "monu",
                       "[1]": "family"
                       }
 
-monkey_breeds_dict_n = {"anmol": "monu", 
-                      "normal": "family"}
+monkey_breeds_dict_n = {"monu": "monu", 
+                      "family": "family"}
 cap = cv2.VideoCapture(0)
 def draw_test(name, pred, im):
     monkey = monkey_breeds_dict[str(pred)]
@@ -375,7 +375,7 @@ def getRandomImage(path):
     return cv2.imread(file_path+"/"+image_name)
 
 for i in range(0,15):
-    input_im = getRandomImage("C:/Users/A/Desktop/mlops/mlt3/monu//validation/")
+    input_im = getRandomImage("C:/Users/A/Desktop/mlops/mlt3/monu//validate/")
     input_original = input_im.copy()
     input_original = cv2.resize(input_original, None, fx=0.5, fy=0.5, interpolation = cv2.INTER_LINEAR)
     
